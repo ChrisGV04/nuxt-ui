@@ -12,6 +12,11 @@
       "require": "./dist/module.cjs"
     }
   },
+  "author": {
+    "name": "Christian Gil Villaseñor",
+    "email": "christian@chrisgvdev.com",
+    "url": "https://chrisgvdev.com"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -31,10 +36,17 @@
     "@nuxt/kit": "^3.4.1"
   },
   "devDependencies": {
+    "@headlessui/vue": "^1.7.13",
     "@nuxt/module-builder": "^0.3.0",
     "@nuxt/schema": "^3.4.1",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "@types/node": "^18",
+    "@vueuse/core": "^10.0.2",
+    "@vueuse/nuxt": "^10.0.2",
     "changelogen": "^0.5.3",
-    "nuxt": "^3.4.1"
+    "nuxt": "^3.4.1",
+    "nuxt-icon": "^0.3.3",
+    "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.7"
   }
 }

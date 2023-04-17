@@ -1,8 +1,8 @@
+<script setup lang="ts"></script>
+
 <template>
   <div>
-    Nuxt module playground!
+    <h1 class="font-mono text-xl uppercase">Playground</h1>
+    <MyTest />
   </div>
 </template>
-
-<script setup>
-</script>

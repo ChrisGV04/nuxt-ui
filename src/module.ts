@@ -1,19 +1,24 @@
-import { addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit';
+import { addComponent, createResolver, defineNuxtModule, installModule } from '@nuxt/kit';
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
-
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule({
   meta: {
     name: '@cgv.web/nuxt-ui',
     configKey: 'cgvwebUI',
   },
-  // Default configuration options of the Nuxt module
-  defaults: {},
-  setup(options, nuxt) {
+
+  async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url);
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'));
+    addComponent({
+      name: 'MyTest',
+      filePath: resolver.resolve('runtime/components/Test.vue'),
+    });
+
+    await installModule('@nuxtjs/tailwindcss', {
+      config: { content: [resolver.resolve('runtime/**/*.{ts,vue}')] },
+    });
+
+    await installModule('@vueuse/nuxt');
+    await installModule('nuxt-icon');
   },
 });
