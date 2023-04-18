@@ -30,7 +30,7 @@
     "dev": "nuxi dev playground -p 8091",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run prepack && changelogen --release && npm publish"
+    "release": "npm run prepack && npm publish"
   },
   "dependencies": {
     "@nuxt/kit": "^3.4.1"
@@ -43,7 +43,6 @@
     "@types/node": "^18",
     "@vueuse/core": "^10.0.2",
     "@vueuse/nuxt": "^10.0.2",
-    "changelogen": "^0.5.3",
     "nuxt": "^3.4.1",
     "nuxt-icon": "^0.3.3",
     "prettier": "^2.8.7",
