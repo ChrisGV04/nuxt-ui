@@ -11,7 +11,7 @@ export default defineNuxtModule({
 
     addComponent({
       name: 'UiTooltip',
-      filePath: resolver.resolve('runtime/components/Tooltip.ts'),
+      filePath: resolver.resolve('runtime/components/Tooltip'),
     });
     addComponent({
       name: 'UiContainer',
@@ -23,7 +23,7 @@ export default defineNuxtModule({
     });
     addComponent({
       name: 'UiHighlightText',
-      filePath: resolver.resolve('runtime/components/HighlightText.ts'),
+      filePath: resolver.resolve('runtime/components/HighlightText'),
     });
 
     await installModule('@nuxtjs/tailwindcss', {

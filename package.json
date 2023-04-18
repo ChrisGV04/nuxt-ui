@@ -30,7 +30,7 @@
     "dev": "nuxi dev playground -p 8091",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run prepack && npm publish"
+    "release": "npm run prepack && npm version patch && npm publish"
   },
   "dependencies": {
     "@nuxt/kit": "^3.4.1"
