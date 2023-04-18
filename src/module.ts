@@ -27,7 +27,11 @@ export default defineNuxtModule({
     });
     addComponent({
       name: 'UiBreakpointViewer',
-      filePath: resolver.resolve('runtime/components/BreakpointViewer'),
+      filePath: resolver.resolve('runtime/components/BreakpointViewer.vue'),
+    });
+    addComponent({
+      name: 'UiBadge',
+      filePath: resolver.resolve('runtime/components/Badge.vue'),
     });
 
     nuxt.hook('tailwindcss:config', function (tailwindConfig) {

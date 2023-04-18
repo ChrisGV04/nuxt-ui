@@ -60,13 +60,16 @@ import type { RouteLocationRaw } from 'vue-router';
 interface NavigationItem {
   name: string;
   route?: RouteLocationRaw;
-  children?: NavigationItem[];
+  children?: Omit<NavigationItem, 'children'>[];
 }
 
 const navigation: NavigationItem[] = [
   {
     name: 'Basic',
-    children: [{ name: 'Tooltip', route: '/tooltip' }],
+    children: [
+      { name: 'Badge', route: '/badge' },
+      { name: 'Tooltip', route: '/tooltip' },
+    ],
   },
   {
     name: 'Functional',
