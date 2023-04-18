@@ -33,6 +33,10 @@ export default defineNuxtModule({
       name: 'UiBadge',
       filePath: resolver.resolve('runtime/components/Badge.vue'),
     });
+    addComponent({
+      name: 'UiDialog',
+      filePath: resolver.resolve('runtime/components/Dialog.vue'),
+    });
 
     nuxt.hook('tailwindcss:config', function (tailwindConfig) {
       if (Array.isArray(tailwindConfig.content))

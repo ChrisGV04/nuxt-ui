@@ -69,6 +69,7 @@ const navigation: NavigationItem[] = [
     children: [
       { name: 'Badge', route: '/badge' },
       { name: 'Tooltip', route: '/tooltip' },
+      { name: 'Dialog', route: '/dialog' },
     ],
   },
   {
