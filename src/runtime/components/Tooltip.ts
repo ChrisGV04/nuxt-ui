@@ -14,6 +14,7 @@ export default defineComponent({
   name: 'Tooltip',
 
   props: {
+    custom: Boolean,
     as: { type: String, default: 'div' },
     separation: { type: Number, default: 12 },
     position: { type: String as PropType<'top' | 'bottom' | 'left' | 'right'>, default: 'top' },
@@ -100,10 +101,13 @@ export default defineComponent({
                   {
                     ref: tooltip,
                     style: tooltipPosition.value,
-                    class:
-                      'pointer-events-none fixed z-50 w-max max-w-[10rem] rounded-md bg-gray-600 px-2 py-1',
+                    class: `pointer-events-none fixed z-50 ${
+                      !props.custom
+                        ? 'w-max max-w-[10rem] rounded-md bg-gray-600 px-2 py-1 text-center text-xs text-white'
+                        : ''
+                    }`,
                   },
-                  h('span', { class: 'block text-center text-xs text-white' }, slots.tooltip())
+                  slots.tooltip()
                 ),
             ]
           ),
