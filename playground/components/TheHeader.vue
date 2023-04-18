@@ -70,6 +70,7 @@ const navigation: NavigationItem[] = [
       { name: 'Badge', route: '/badge' },
       { name: 'Tooltip', route: '/tooltip' },
       { name: 'Dialog', route: '/dialog' },
+      { name: 'Slideover', route: '/slideover' },
     ],
   },
   {

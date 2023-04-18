@@ -37,6 +37,10 @@ export default defineNuxtModule({
       name: 'UiDialog',
       filePath: resolver.resolve('runtime/components/Dialog.vue'),
     });
+    addComponent({
+      name: 'UiSlideover',
+      filePath: resolver.resolve('runtime/components/Slideover.vue'),
+    });
 
     nuxt.hook('tailwindcss:config', function (tailwindConfig) {
       if (Array.isArray(tailwindConfig.content))
