@@ -17,6 +17,10 @@ export default defineNuxtModule({
       name: 'UiContainer',
       filePath: resolver.resolve('runtime/components/Container.vue'),
     });
+    addComponent({
+      name: 'UiMarquee',
+      filePath: resolver.resolve('runtime/components/Marquee.vue'),
+    });
 
     await installModule('@nuxtjs/tailwindcss', {
       viewer: false,

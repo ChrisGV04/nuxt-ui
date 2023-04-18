@@ -10,8 +10,19 @@ useHead({ title: 'Nuxt UI' });
       <UiContainer class="flex max-w-5xl items-center justify-between">
         <NuxtLink to="/" class="text-xl font-semibold text-gray-900">Nuxt UI</NuxtLink>
 
-        <div>
-          <NuxtLink to="/tooltip" class="hover:text-sky-600 hover:underline">Tooltips</NuxtLink>
+        <div class="flex space-x-1 text-gray-900">
+          <NuxtLink
+            to="/tooltip"
+            active-class="text-primary-500 underline"
+            class="block rounded-md px-3 py-2 hover:bg-gray-100"
+            >Tooltip</NuxtLink
+          >
+          <NuxtLink
+            to="/marquee"
+            active-class="text-primary-500 underline"
+            class="block rounded-md px-3 py-2 hover:bg-gray-100"
+            >Marquee</NuxtLink
+          >
         </div>
       </UiContainer>
     </header>
