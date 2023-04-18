@@ -1,4 +1,4 @@
-import { addComponent, createResolver, defineNuxtModule, installModule } from '@nuxt/kit';
+import { addComponent, createResolver, defineNuxtModule } from '@nuxt/kit';
 
 export default defineNuxtModule({
   meta: {
@@ -26,9 +26,10 @@ export default defineNuxtModule({
       filePath: resolver.resolve('runtime/components/HighlightText'),
     });
 
-    await installModule('@nuxtjs/tailwindcss', {
-      viewer: false,
-      config: { content: [resolver.resolve('runtime/**/*.{ts,vue}')] },
+    nuxt.hook('tailwindcss:config', function (tailwindConfig) {
+      console.log('Calling the tailwind hook inside nuxt-ui');
+      if (Array.isArray(tailwindConfig.content))
+        tailwindConfig.content.push(resolver.resolve('runtime/**/*.{vue,ts,mjs,cjs}'));
     });
   },
 });

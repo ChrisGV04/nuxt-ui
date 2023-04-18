@@ -3,22 +3,22 @@
 <template>
   <UiContainer class="max-w-5xl py-4">
     <div class="flex items-start gap-8">
-      <div class="flex flex-1 flex-nowrap gap-8 overflow-auto rounded-xl bg-gray-100 p-8">
+      <div class="flex flex-1 flex-nowrap items-center gap-8 overflow-auto rounded-xl bg-gray-100 p-8">
         <UiTooltip class="shrink-0 hover:cursor-help">
           Hover me
           <template #tooltip>Welcome to the tooltip</template>
         </UiTooltip>
 
-        <div v-for="i in 10" class="h-20 w-20 shrink-0 rounded-full bg-red-400"></div>
+        <div v-for="i in 10" class="bg-primary-400 h-20 w-20 shrink-0 rounded-full"></div>
       </div>
 
       <div class="flex max-h-96 flex-col gap-8 overflow-auto rounded-xl bg-gray-100 px-8">
-        <div v-for="i in 2" class="h-20 w-20 shrink-0 rounded-full bg-red-400"></div>
+        <div v-for="i in 2" class="bg-primary-400 h-20 w-20 shrink-0 rounded-full"></div>
         <UiTooltip position="right" class="w-max hover:cursor-help">
           Hover me
           <template #tooltip>Welcome to the tooltip</template>
         </UiTooltip>
-        <div v-for="i in 5" class="h-20 w-20 shrink-0 rounded-full bg-red-400"></div>
+        <div v-for="i in 5" class="bg-primary-400 h-20 w-20 shrink-0 rounded-full"></div>
       </div>
     </div>
 
