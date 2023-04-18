@@ -1,13 +1,13 @@
 import { useElementBounding } from '@vueuse/core';
 import {
+  Teleport,
+  Transition,
   computed,
   defineComponent,
   h,
   ref,
   type HTMLAttributes,
   type PropType,
-  Teleport,
-  Transition,
 } from 'vue';
 
 export default defineComponent({
@@ -94,22 +94,21 @@ export default defineComponent({
               enterActiveClass: 'transition-[opacity,transform] duration-75',
               leaveActiveClass: 'transition-[opacity,transform] duration-100',
             },
-            [
+            () =>
               showTip.value &&
-                h(
-                  'div',
-                  {
-                    ref: tooltip,
-                    style: tooltipPosition.value,
-                    class: `pointer-events-none fixed z-50 ${
-                      !props.custom
-                        ? 'w-max max-w-[10rem] rounded-md bg-gray-600 px-2 py-1 text-center text-xs text-white'
-                        : ''
-                    }`,
-                  },
-                  slots.tooltip()
-                ),
-            ]
+              h(
+                'div',
+                {
+                  ref: tooltip,
+                  style: tooltipPosition.value,
+                  class: `pointer-events-none fixed z-50 ${
+                    !props.custom
+                      ? 'w-max max-w-[10rem] rounded-md bg-gray-600 px-2 py-1 text-center text-xs text-white'
+                      : ''
+                  }`,
+                },
+                slots.tooltip!()
+              )
           ),
         ]),
     ];
