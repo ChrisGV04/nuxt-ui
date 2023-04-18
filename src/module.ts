@@ -21,6 +21,10 @@ export default defineNuxtModule({
       name: 'UiMarquee',
       filePath: resolver.resolve('runtime/components/Marquee.vue'),
     });
+    addComponent({
+      name: 'UiHighlightText',
+      filePath: resolver.resolve('runtime/components/HighlightText.ts'),
+    });
 
     await installModule('@nuxtjs/tailwindcss', {
       viewer: false,

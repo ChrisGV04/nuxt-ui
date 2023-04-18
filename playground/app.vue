@@ -11,18 +11,9 @@ useHead({ title: 'Nuxt UI' });
         <NuxtLink to="/" class="text-xl font-semibold text-gray-900">Nuxt UI</NuxtLink>
 
         <div class="flex space-x-1 text-gray-900">
-          <NuxtLink
-            to="/tooltip"
-            active-class="text-primary-500 underline"
-            class="block rounded-md px-3 py-2 hover:bg-gray-100"
-            >Tooltip</NuxtLink
-          >
-          <NuxtLink
-            to="/marquee"
-            active-class="text-primary-500 underline"
-            class="block rounded-md px-3 py-2 hover:bg-gray-100"
-            >Marquee</NuxtLink
-          >
+          <NuxtLink to="/tooltip" class="link">Tooltip</NuxtLink>
+          <NuxtLink to="/marquee" class="link">Marquee</NuxtLink>
+          <NuxtLink to="/highlights" class="link">Highlights</NuxtLink>
         </div>
       </UiContainer>
     </header>
@@ -30,3 +21,12 @@ useHead({ title: 'Nuxt UI' });
     <NuxtPage />
   </div>
 </template>
+
+<style scoped>
+.link {
+  @apply block rounded-md px-3 py-2 hover:bg-gray-100;
+}
+.link.router-link-active {
+  @apply text-primary-500 underline;
+}
+</style>
