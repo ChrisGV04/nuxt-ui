@@ -27,7 +27,6 @@ export default defineNuxtModule({
     });
 
     nuxt.hook('tailwindcss:config', function (tailwindConfig) {
-      console.log('Calling the tailwind hook inside nuxt-ui');
       if (Array.isArray(tailwindConfig.content))
         tailwindConfig.content.push(resolver.resolve('runtime/**/*.{vue,ts,mjs,cjs}'));
     });
