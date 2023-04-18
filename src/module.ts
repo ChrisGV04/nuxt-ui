@@ -13,6 +13,10 @@ export default defineNuxtModule({
       name: 'UiTooltip',
       filePath: resolver.resolve('runtime/components/Tooltip.ts'),
     });
+    addComponent({
+      name: 'UiContainer',
+      filePath: resolver.resolve('runtime/components/Container.vue'),
+    });
 
     await installModule('@nuxtjs/tailwindcss', {
       viewer: false,
