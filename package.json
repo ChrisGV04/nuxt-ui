@@ -44,6 +44,7 @@
     "@vueuse/core": "^10.0.2",
     "@vueuse/nuxt": "^10.0.2",
     "nuxt": "^3.4.1",
+    "nuxt-icon": "^0.3.3",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7"
   },

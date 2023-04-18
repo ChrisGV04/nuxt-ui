@@ -25,6 +25,10 @@ export default defineNuxtModule({
       name: 'UiHighlightText',
       filePath: resolver.resolve('runtime/components/HighlightText'),
     });
+    addComponent({
+      name: 'UiBreakpointViewer',
+      filePath: resolver.resolve('runtime/components/BreakpointViewer'),
+    });
 
     nuxt.hook('tailwindcss:config', function (tailwindConfig) {
       if (Array.isArray(tailwindConfig.content))
