@@ -10,15 +10,13 @@ export default defineNuxtModule({
     const resolver = createResolver(import.meta.url);
 
     addComponent({
-      name: 'MyTest',
-      filePath: resolver.resolve('runtime/components/Test.vue'),
+      name: 'UiTooltip',
+      filePath: resolver.resolve('runtime/components/Tooltip.ts'),
     });
 
     await installModule('@nuxtjs/tailwindcss', {
+      viewer: false,
       config: { content: [resolver.resolve('runtime/**/*.{ts,vue}')] },
     });
-
-    await installModule('@vueuse/nuxt');
-    await installModule('nuxt-icon');
   },
 });
