@@ -27,13 +27,13 @@ useIntersectionObserver(wrapperRef, ([{ isIntersecting }]) => (isVisible.value =
   <div ref="wrapperRef" class="marquee__wrapper flex select-none overflow-hidden">
     <div
       ref="marqueeRef"
-      :class="['marquee__content', !isVisible || (pause && 'pause'), reverse && 'reverse']"
+      :class="['marquee__content', (!isVisible || pause) && 'pause', reverse && 'reverse']"
     >
       <slot />
     </div>
     <div
       aria-hidden="true"
-      :class="['marquee__content', !isVisible || (pause && 'pause'), reverse && 'reverse']"
+      :class="['marquee__content', (!isVisible || pause) && 'pause', reverse && 'reverse']"
     >
       <slot />
     </div>
