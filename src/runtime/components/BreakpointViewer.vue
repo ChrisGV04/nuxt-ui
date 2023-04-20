@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
-import { computed } from 'vue';
+import { breakpointsTailwind, computedEager, useBreakpoints } from '@vueuse/core';
 
 const bp = useBreakpoints(breakpointsTailwind);
-const size = computed(() => bp.current().value.at(-1) || 'xs');
+const size = computedEager(() => bp.current().value.at(-1) || 'xs');
 </script>
 
 <template>
