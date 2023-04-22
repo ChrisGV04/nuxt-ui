@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { useElementBounding, useIntersectionObserver } from '@vueuse/core';
+import { useElementBounding, useElementVisibility } from '@vueuse/core';
 import { computed, ref } from 'vue';
 
 const props = defineProps({ speed: { type: Number, default: 20 }, reverse: Boolean, pause: Boolean });
 
-const isVisible = ref(false);
 const wrapperRef = ref<HTMLElement | null>(null);
 const marqueeRef = ref<HTMLElement | null>(null);
 
@@ -20,7 +19,7 @@ const duration = computed(
     }s`
 );
 
-useIntersectionObserver(wrapperRef, ([{ isIntersecting }]) => (isVisible.value = isIntersecting));
+const isVisible = useElementVisibility(wrapperRef);
 </script>
 
 <template>

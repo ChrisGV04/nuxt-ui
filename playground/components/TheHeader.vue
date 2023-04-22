@@ -71,6 +71,7 @@ const navigation: NavigationItem[] = [
       { name: 'Tooltip', route: '/tooltip' },
       { name: 'Dialog', route: '/dialog' },
       { name: 'Slideover', route: '/slideover' },
+      { name: 'Marquee', route: '/marquee' },
     ],
   },
   {
