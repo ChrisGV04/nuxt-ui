@@ -1,6 +1,6 @@
 {
   "name": "@cgv.web/nuxt-ui",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A Nuxt 3 module containing the most common components used at CGV WEB",
   "repository": "ChrisGV04/nuxt-ui",
   "license": "MIT",
