@@ -8,9 +8,10 @@ import {
   ref,
   type HTMLAttributes,
   type PropType,
+  type SlotsType,
 } from 'vue';
 
-export default defineComponent({
+export default /*#__PURE__*/ defineComponent({
   name: 'Tooltip',
 
   props: {
@@ -19,6 +20,8 @@ export default defineComponent({
     separation: { type: Number, default: 12 },
     position: { type: String as PropType<'top' | 'bottom' | 'left' | 'right'>, default: 'top' },
   },
+
+  slots: Object as SlotsType<{ default: any; tooltip: any }>,
 
   setup(props, { slots, expose, attrs }) {
     const tooltip = ref<HTMLElement | null>(null);

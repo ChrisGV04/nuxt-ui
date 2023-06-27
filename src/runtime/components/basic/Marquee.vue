@@ -2,7 +2,13 @@
 import { useElementBounding, useElementVisibility } from '@vueuse/core';
 import { computed, ref } from 'vue';
 
-const props = defineProps({ speed: { type: Number, default: 20 }, reverse: Boolean, pause: Boolean });
+export interface MarqueeProps {
+  speed?: number;
+  reverse?: boolean;
+  pause?: boolean;
+}
+
+const props = withDefaults(defineProps<MarqueeProps>(), { speed: 20 });
 
 const wrapperRef = ref<HTMLElement | null>(null);
 const marqueeRef = ref<HTMLElement | null>(null);

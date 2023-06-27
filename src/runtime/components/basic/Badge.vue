@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, type PropType } from 'vue';
+import { computed } from 'vue';
 
 type BadgeColors = 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink';
 
@@ -10,14 +10,16 @@ interface BadgeElements {
   action: string;
 }
 
-const props = defineProps({
-  dot: Boolean,
-  pill: Boolean,
-  flat: Boolean,
-  small: Boolean,
-  noBg: Boolean,
-  color: { type: String as PropType<BadgeColors>, default: 'gray' },
-});
+export interface BadgeProps {
+  dot?: boolean;
+  pill?: boolean;
+  flat?: boolean;
+  small?: boolean;
+  noBg?: boolean;
+  color?: BadgeColors;
+}
+
+const props = withDefaults(defineProps<BadgeProps>(), { color: 'gray' });
 defineEmits(['click:action']);
 
 const DEFAULT_COLOR_VARIANTS: Record<BadgeColors, BadgeElements> = {

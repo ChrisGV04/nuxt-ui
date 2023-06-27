@@ -1,4 +1,4 @@
-import { defineComponent, h } from 'vue';
+import { defineComponent, h, type SlotsType } from 'vue';
 
 export default defineComponent({
   name: 'HighlightText',
@@ -8,6 +8,8 @@ export default defineComponent({
     text: { type: String, required: true },
     finderRegex: { type: RegExp, default: /\[(.*?)\]/g },
   },
+
+  slots: Object as SlotsType<{ highlights: { content: string } }>,
 
   setup(props, { slots, attrs }) {
     const text = props.text.toString();

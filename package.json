@@ -33,20 +33,20 @@
     "release": "npm version patch && npm run prepack && npm publish"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.4.2"
+    "@nuxt/kit": "^3.6.1"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.7.13",
-    "@nuxt/module-builder": "^0.3.0",
-    "@nuxt/schema": "^3.4.2",
-    "@nuxtjs/tailwindcss": "^6.6.6",
-    "@types/node": "^18.15.13",
-    "@vueuse/core": "^10.0.2",
-    "@vueuse/nuxt": "^10.0.2",
-    "nuxt": "^3.4.2",
-    "nuxt-icon": "^0.3.3",
-    "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.7"
+    "@headlessui/vue": "^1.7.14",
+    "@nuxt/module-builder": "^0.4.0",
+    "@nuxt/schema": "^3.6.1",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^20.3.2",
+    "@vueuse/core": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.0",
+    "nuxt": "^3.6.1",
+    "nuxt-icon": "^0.4.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   },
   "peerDependencies": {
     "@headlessui/vue": "^1.7.13",

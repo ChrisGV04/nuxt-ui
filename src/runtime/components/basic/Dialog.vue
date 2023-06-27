@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue';
 
-defineProps({ show: Boolean });
-defineEmits(['close', 'before-leave', 'after-leave', 'before-enter', 'after-enter']);
-</script>
+export interface DialogProps {
+  show: boolean;
+}
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({ inheritAttrs: false });
+defineOptions({ inheritAttrs: false });
+
+defineProps<DialogProps>();
+defineEmits(['close', 'before-leave', 'after-leave', 'before-enter', 'after-enter']);
 </script>
 
 <template>

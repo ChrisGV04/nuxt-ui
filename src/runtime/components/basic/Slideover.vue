@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue';
-import type { PropType } from 'vue';
 
-defineProps({
-  show: Boolean,
-  noOverlay: Boolean,
-  direction: { type: String as PropType<'left' | 'right'>, default: 'right' },
-});
+export interface SlideoverProps {
+  show: boolean;
+  noOverlay?: boolean;
+  direction?: 'left' | 'right';
+}
+
+defineOptions({ inheritAttrs: false });
+withDefaults(defineProps<SlideoverProps>(), { direction: 'left' });
 defineEmits(['close', 'before-leave', 'after-leave', 'before-enter', 'after-enter']);
-</script>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({ inheritAttrs: false });
 </script>
 
 <template>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-defineProps({ noYPadding: Boolean, noXPadding: Boolean });
+export interface ContainerProps {
+  noXPadding?: boolean;
+}
+
+defineProps<ContainerProps>();
 </script>
 
 <template>
